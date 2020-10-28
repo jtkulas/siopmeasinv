@@ -32,6 +32,14 @@ summary(fit)
 
 ## MI below: https://www.rdocumentation.org/packages/semTools/versions/0.5-1/topics/measEq.syntax
 
+## Another resource: https://jslefche.github.io/sem_book/multigroup-analysis.html
+
+library(semPlot)
+layout(t(1:2))
+semPaths(fit,what="std",layout="tree")
+
+
+
 library(semTools)
 MI <- measEq.syntax(model, 
               data = data2, 
