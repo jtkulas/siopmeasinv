@@ -1,7 +1,10 @@
+## New data (11/19/20) - our focus is A30 - A41 (used to be r30-r41)
+## selection = MI groups
+
 library(Hmisc)
 library(careless)
 
-data <- spss.get("TD-12 Research 2020 ADDITIONAL.sav")
+data <- spss.get("TD-12 Research ABD combined N735 SIOP.sav")
 
 write.csv(data, "SIOP.csv")
 
