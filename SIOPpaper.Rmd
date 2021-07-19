@@ -1,0 +1,141 @@
+---
+title             : "Measurement Invariance of the Dirty Dozen: Student and Working Adult Samples"
+shorttitle        : "Measurement Invariance"
+
+author: 
+  - name          : "Yang Yang"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Shanghai, China"
+    email         : "yangyangsh@outlook.com"
+
+  - name          : "John Kulas"
+    affiliation   : "2"
+
+affiliation:
+  - id            : "1"
+    institution   : "Roche"
+  - id            : "2"
+    institution   : "Montclair State University"
+
+authornote: |
+  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+
+  Enter author note here.
+
+abstract: |
+  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
+  
+  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
+  
+  One sentence clearly stating the **general problem** being addressed by  this particular study.
+  
+  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
+  
+  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
+  
+  One or two sentences to put the results into a more **general context**.
+  
+  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib", "measinvar.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed, echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+```{r readingdata}
+
+library(foreign)
+library(careless)
+
+
+masterdata <- read.spss("Dirty Dozon data for SIOP.sav")
+DDdata <- data.frame(masterdata[c(1:3,34:45)])
+
+table <- descr::freq(DDdata$selection, plot=FALSE)
+dtable <- cbind(sample = rownames(table), table) ## to call out in paper
+
+
+####################################### data screening below
+
+careless_long <- longstring(DDdata[4:15])
+careless_irv <- irv(DDdata[4:15])
+
+careless_long <- data.frame(careless_long)
+careless_irv  <- data.frame(careless_irv)
+
+DDdata <- cbind(DDdata, careless_long, careless_irv)
+
+#descr::freq(DDdata$careless_long)
+#descr::freq(DDdata$careless_irv)
+
+use <- DDdata[ which(DDdata$careless_long<7), ]
+
+
+```
+
+## Participants
+
+In total `r nrow(DDdata)` individuals responded to the Dirty Dozen (as well as additional scales not the focus of the current presentation). This total was comprised of `r dtable[1,2]` `r dtable[1,1]`, `r dtable[2,2]` `r dtable[2,1]`, and `r dtable[3,2]` `r dtable[3,1]` individuals. After screening for undifferentiated responses via the `R` package `careless` [@R-careless], we retained `r nrow(use)` respondents who had no more than 6 undifferentiated similar responses across the 12 total items.
+
+## Material
+
+## Procedure
+
+## Data analysis
+We used `r cite_r("r-references.bib")` for all our analyses. 
+
+
+# Results
+
+```{r measinv}
+
+## https://users.ugent.be/~yrosseel/lavaan/multiplegroup6Dec2012.pdf
+```
+
+We looked at structural invariance as well as latent means [@steinmetz2009testing].
+
+# Discussion
+
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
