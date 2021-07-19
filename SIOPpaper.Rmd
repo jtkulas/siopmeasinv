@@ -124,7 +124,7 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 ## https://users.ugent.be/~yrosseel/lavaan/multiplegroup6Dec2012.pdf
 ```
 
-We looked at structural invariance as well as latent means [@steinmetz2009testing].
+We looked at structural invariance as well as latent means [@steinmetz2009testing; @meredith1993measurement].
 
 # Discussion
 
