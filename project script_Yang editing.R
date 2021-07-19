@@ -22,3 +22,11 @@ descr::freq(DDdata$careless_irv)
 
 use <- DDdata[ which(DDdata$careless_long<7), ]
 
+library(lavaan)
+library(semTools)
+
+DD.model <-'mach   =~ A30 + A31 + A32 + A33
+            narc   =~ A34 + A35 + A36 + A37
+            psyc   =~ A38 + A39 + A40 + A41 '
+
+measurementInvariance(model=DD.model, data=use, group="selection")
