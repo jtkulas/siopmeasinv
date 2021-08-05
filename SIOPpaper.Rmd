@@ -75,6 +75,9 @@ We report how we determined our sample size, all data exclusions (if any), all m
 library(foreign)
 library(careless)
 
+## A30-A41 are Dirty Dozen
+## A42-A57 are Hexico Honesty-Humility
+## within the HH scale there are subscales (identified in "67624 research items update.xlsx)
 
 masterdata <- read.spss("Dirty Dozon data for SIOP.sav")
 tempdata <- data.frame(masterdata)                           ## Yang other variables
@@ -111,6 +114,8 @@ In total `r nrow(DDdata)` individuals responded to the Dirty Dozen (as well as a
 ## Procedure
 
 Decrease in $\Delta\chi^2$ across models indicates a lack of invariance (typically not considered a "good thing"). Multiple indices are consulted across models, including $\Delta\chi^2$, RMSEA, CFI, TLI, BIC, and AIC. 
+
+Also want to look at correlations of the simplified Chinese version of the DD with the Honesty-Humility subscales (Sincerity, Fairness, Greed Avoidance, and Modesty).
 
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses. 
