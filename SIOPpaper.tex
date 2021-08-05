@@ -195,6 +195,8 @@ Two or three sentences to provide a \textbf{broader perspective}, readily compre
 \begin{document}
 \maketitle
 
+Some groups may be expected to exhibit different item-construct associations due to shifting motivational forces.
+
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
 
@@ -203,7 +205,7 @@ We report how we determined our sample size, all data exclusions (if any), all m
 \hypertarget{participants}{%
 \subsection{Participants}\label{participants}}
 
-In total 1106 individuals responded to the Dirty Dozen (as well as additional scales not the focus of the current presentation). This total was comprised of 208 working adults low-stakes, 527 working adults high-stakes, and 371 students low-stakes individuals. After screening for undifferentiated responses via the \texttt{R} package \texttt{careless} (Yentes \& Wilhelm, 2021), we retained 1054 respondents who had no more than 6 undifferentiated similar responses across the 12 total items.
+In total 1106 individuals responded to the Dirty Dozen (as well as additional scales not the focus of the current presentation). This total was comprised of 208 working adults low-stakes, 527 working adults high-stakes, and 371 students low-stakes individuals. After screening for undifferentiated responses via the \texttt{R} package \texttt{careless} (Yentes \& Wilhelm, 2021), we retained 1054 respondents who had no more than 6 sequentially identical responses across the 12 total items.
 
 \hypertarget{material}{%
 \subsection{Material}\label{material}}
@@ -211,10 +213,16 @@ In total 1106 individuals responded to the Dirty Dozen (as well as additional sc
 \hypertarget{procedure}{%
 \subsection{Procedure}\label{procedure}}
 
+Decrease in \(\Delta\chi^2\) across models indicates a lack of invariance (typically not considered a ``good thing''). Multiple indices are consulted across models, including \(\Delta\chi^2\), RMSEA, CFI, TLI, BIC, and AIC.
+
 \hypertarget{data-analysis}{%
 \subsection{Data analysis}\label{data-analysis}}
 
 We used R {[}Version 4.0.5; R Core Team (2021){]} and the R-packages \emph{careless} {[}Version 1.2.1; Yentes and Wilhelm (2021){]}, \emph{foreign} {[}Version 0.8.81; R Core Team (2020){]}, \emph{lavaan} {[}Version 0.6.8; Rosseel (2012){]}, \emph{papaja} {[}Version 0.1.0.9997; Aust and Barth (2020){]}, and \emph{semTools} {[}Version 0.5.5; Jorgensen, Pornprasertmanit, Schoemann, and Rosseel (2021){]} for all our analyses.
+
+\begin{figure}
+\includegraphics[width=4.71in]{steps} \caption{Steps for measurement invariance (taken from Xu, 2012).}\label{fig:figure1}
+\end{figure}
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
@@ -230,13 +238,19 @@ We used R {[}Version 4.0.5; R Core Team (2021){]} and the R-packages \emph{carel
 ## 
 ## Chi-Squared Difference Test
 ## 
-##                 Df   AIC   BIC  Chisq Chisq diff Df diff Pr(>Chisq)    
-## fit.configural 153 37059 37640 1407.7                                  
-## fit.loadings   171 37135 37626 1518.9     111.25      18  1.837e-15 ***
-## fit.intercepts 189 37230 37632 1650.5     131.54      18  < 2.2e-16 ***
-## fit.means      195 37344 37716 1775.9     125.40       6  < 2.2e-16 ***
+##                 Df   AIC   BIC  Chisq Chisq diff Df diff
+## fit.configural 153 37059 37640 1407.7                   
+## fit.loadings   171 37135 37626 1518.9     111.25      18
+## fit.intercepts 189 37230 37632 1650.5     131.54      18
+## fit.means      195 37344 37716 1775.9     125.40       6
+##                Pr(>Chisq)    
+## fit.configural               
+## fit.loadings    1.837e-15 ***
+## fit.intercepts  < 2.2e-16 ***
+## fit.means       < 2.2e-16 ***
 ## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## Signif. codes:  
+## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## 
 ## Fit measures:

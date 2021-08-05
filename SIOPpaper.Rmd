@@ -69,7 +69,7 @@ set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed, echo=FALSE, warning=FALSE, message=FALSE)
 ```
 
-
+Some groups may be expected to exhibit different item-construct associations due to shifting motivational forces. 
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
@@ -107,15 +107,22 @@ use <- DDdata[ which(DDdata$careless_long<7), ]
 
 ## Participants
 
-In total `r nrow(DDdata)` individuals responded to the Dirty Dozen (as well as additional scales not the focus of the current presentation). This total was comprised of `r dtable[1,2]` `r dtable[1,1]`, `r dtable[2,2]` `r dtable[2,1]`, and `r dtable[3,2]` `r dtable[3,1]` individuals. After screening for undifferentiated responses via the `R` package `careless` [@R-careless], we retained `r nrow(use)` respondents who had no more than 6 undifferentiated similar responses across the 12 total items.
+In total `r nrow(DDdata)` individuals responded to the Dirty Dozen (as well as additional scales not the focus of the current presentation). This total was comprised of `r dtable[1,2]` `r dtable[1,1]`, `r dtable[2,2]` `r dtable[2,1]`, and `r dtable[3,2]` `r dtable[3,1]` individuals. After screening for undifferentiated responses via the `R` package `careless` [@R-careless], we retained `r nrow(use)` respondents who had no more than 6 sequentially identical responses across the 12 total items.
 
 ## Material
 
 ## Procedure
 
+Decrease in $\Delta\chi^2$ across models indicates a lack of invariance (typically not considered a "good thing"). Multiple indices are consulted across models, including $\Delta\chi^2$, RMSEA, CFI, TLI, BIC, and AIC. 
+
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses. 
 
+```{r figure1, fig.cap="Steps for measurement invariance (taken from Xu, 2012)."}
+
+knitr::include_graphics("steps.PNG")
+
+```
 
 # Results
 
