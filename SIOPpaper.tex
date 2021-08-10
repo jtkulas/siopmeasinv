@@ -175,7 +175,7 @@ Correspondence concerning this article should be addressed to Yang Yang, Shangha
 \affiliation{\vspace{0.5cm}\textsuperscript{1} Roche\\\textsuperscript{2} Montclair State University}
 
 \abstract{
-Now we are evaluating the psychometric properties of the dirty dozen simplified Chinese version by using samples in real settings: job applicants and incumbents (in addition to students). We replicate a previous study using the student sample, then continue to evaluate with organizational data. We find that the scales are non-invariant.
+Now we are evaluating the psychometric properties of the dirty dozen simplified Chinese version by using samples in real settings: job applicants and incumbents (in addition to students). We replicate a previous study using the student sample, then continue to evaluate with organizational data. We find that the scales are non-invariant. Seems to be revisiting these articles: Geng, Sun, Huang, Zhu, and Han (2015) and Grigoras, Butucescu, Miulescu, Opariuc-Dan, and Iliescu (2020)
 }
 
 
@@ -191,12 +191,14 @@ All studies investigating psychometric properties of these scales use University
 
 Some groups may be expected to exhibit different item-construct associations due to shifting motivational forces.
 
-ITC guidlines for translating and adapting tests recommends looking at possible differences across motives - for example,
+ITC guidlines for translating and adapting tests recommends looking at possible differences across motives (Commission, 2017). For example,
+
+Yang's references: Church et al. (2011), Schoot, Lugtig, and Hox (2012), Schmitt and Kuljanin (2008), Geng, Sun, Huang, Zhu, and Han (2015), Grigoras, Butucescu, Miulescu, Opariuc-Dan, and Iliescu (2020), Jonason and Webster (2010)
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
 
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. We also look at intercorrelations among items within the samplings.
+We follow the We also look at intercorrelations among items within the samplings.
 
 \hypertarget{participants}{%
 \subsection{Participants}\label{participants}}
@@ -216,7 +218,7 @@ Also want to look at correlations of the simplified Chinese version of the DD wi
 \hypertarget{data-analysis}{%
 \subsection{Data analysis}\label{data-analysis}}
 
-We used R {[}Version 4.0.5; R Core Team (2021){]} and the R-packages \emph{careless} {[}Version 1.2.1; Yentes and Wilhelm (2021){]}, \emph{foreign} {[}Version 0.8.81; R Core Team (2020){]}, \emph{lavaan} {[}Version 0.6.8; Rosseel (2012){]}, \emph{papaja} {[}Version 0.1.0.9997; Aust and Barth (2020){]}, and \emph{semTools} {[}Version 0.5.5; Jorgensen, Pornprasertmanit, Schoemann, and Rosseel (2021){]} for all our analyses.
+We used R {[}Version 4.0.5; R Core Team (2021){]} and the R-packages \emph{careless} {[}Version 1.2.1; Yentes and Wilhelm (2021){]}, \emph{corx} {[}Version 1.0.6.1; Conigrave (2020){]}, \emph{foreign} {[}Version 0.8.81; R Core Team (2020){]}, \emph{lavaan} {[}Version 0.6.8; Rosseel (2012){]}, \emph{papaja} {[}Version 0.1.0.9997; Aust and Barth (2020){]}, and \emph{semTools} {[}Version 0.5.5; Jorgensen, Pornprasertmanit, Schoemann, and Rosseel (2021){]} for all our analyses.
 
 \begin{figure}
 \includegraphics[width=4.71in]{steps} \caption{Steps for measurement invariance (taken from Xu, 2012).}\label{fig:figure1}
@@ -224,6 +226,12 @@ We used R {[}Version 4.0.5; R Core Team (2021){]} and the R-packages \emph{carel
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
+
+We looked at structural invariance as well as latent means (Meredith, 1993; Steinmetz, Schmidt, Tina-Booh, Wieczorek, \& Schwartz, 2009). The models failed to exhibit metric invariance (Model 2 - Model 1 exhibited a significant \(\Delta\) on both \(\chi^2\) as well as RMSEA)
+
+\begin{quote}
+Not sure how to pull table or identify object elements - \texttt{model1} object is too large to navigate easily.
+\end{quote}
 
 \begin{verbatim}
 ## 
@@ -236,19 +244,13 @@ We used R {[}Version 4.0.5; R Core Team (2021){]} and the R-packages \emph{carel
 ## 
 ## Chi-Squared Difference Test
 ## 
-##                 Df   AIC   BIC  Chisq Chisq diff Df diff
-## fit.configural 153 37059 37640 1407.7                   
-## fit.loadings   171 37135 37626 1518.9     111.25      18
-## fit.intercepts 189 37230 37632 1650.5     131.54      18
-## fit.means      195 37344 37716 1775.9     125.40       6
-##                Pr(>Chisq)    
-## fit.configural               
-## fit.loadings    1.837e-15 ***
-## fit.intercepts  < 2.2e-16 ***
-## fit.means       < 2.2e-16 ***
+##                 Df   AIC   BIC  Chisq Chisq diff Df diff Pr(>Chisq)    
+## fit.configural 153 37059 37640 1407.7                                  
+## fit.loadings   171 37135 37626 1518.9     111.25      18  1.837e-15 ***
+## fit.intercepts 189 37230 37632 1650.5     131.54      18  < 2.2e-16 ***
+## fit.means      195 37344 37716 1775.9     125.40       6  < 2.2e-16 ***
 ## ---
-## Signif. codes:  
-## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## 
 ## Fit measures:
@@ -515,7 +517,41 @@ We used R {[}Version 4.0.5; R Core Team (2021){]} and the R-packages \emph{carel
 ##     psyc              0.487    0.099    4.944    0.000
 \end{verbatim}
 
-We looked at structural invariance as well as latent means (Meredith, 1993; Steinmetz, Schmidt, Tina-Booh, Wieczorek, \& Schwartz, 2009).
+\includegraphics{SIOPpaper_files/figure-latex/measinv-1.pdf} \includegraphics{SIOPpaper_files/figure-latex/measinv-2.pdf} \includegraphics{SIOPpaper_files/figure-latex/measinv-3.pdf}
+
+Yang also wanted correlations
+
+\begin{table}[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:scalecors}Scale intercorrelations (all participants).}
+
+\begin{tabular}{llllllllll}
+\toprule
+ & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$SD$}\\
+\midrule
+1. Machiavelliansm & - &  &  &  &  &  &  & 1.62 & 0.78\\
+2. Narcissism & .29*** & - &  &  &  &  &  & 3.69 & 1.07\\
+3. Psychopathy & .57*** & .19*** & - &  &  &  &  & 1.51 & 0.62\\
+4. Fairness & -.34*** & -.02 & -.45*** & - &  &  &  & 5.40 & 0.84\\
+5. GreedAvoidance & -.26*** & -.45*** & -.24*** & .27*** & - &  &  & 3.52 & 1.14\\
+6. Modesty & -.23*** & -.43*** & -.17*** & .15** & .43*** & - &  & 3.72 & 0.85\\
+7. Sincerity & -.14** & .04 & -.04 & .23*** & .11* & .18*** & - & 3.85 & 0.74\\
+8. HonestyHumility & -.38*** & -.37*** & -.35*** & .61*** & .77*** & .68*** & .51*** & 4.12 & 0.59\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * p < 0.05; ** p < 0.01; *** p < 0.001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
@@ -534,6 +570,24 @@ We looked at structural invariance as well as latent means (Meredith, 1993; Stei
 \leavevmode\hypertarget{ref-R-papaja}{}%
 Aust, F., \& Barth, M. (2020). \emph{{papaja}: {Create} {APA} manuscripts with {R Markdown}}. Retrieved from \url{https://github.com/crsh/papaja}
 
+\leavevmode\hypertarget{ref-church2011cross}{}%
+Church, A. T., Alvarez, J. M., Mai, N. T., French, B. F., Katigbak, M. S., \& Ortiz, F. A. (2011). Are cross-cultural comparisons of personality profiles meaningful? Differential item and facet functioning in the revised NEO personality inventory. \emph{Journal of Personality and Social Psychology}, \emph{101}(5), 1068--1089.
+
+\leavevmode\hypertarget{ref-itc_2017}{}%
+Commission, I. T. (2017). The ITC guidelines for translating and adapting tests (second edition).
+
+\leavevmode\hypertarget{ref-R-corx}{}%
+Conigrave, J. (2020). \emph{Corx: Create and format correlation matrices}. Retrieved from \url{https://CRAN.R-project.org/package=corx}
+
+\leavevmode\hypertarget{ref-geng2015dirty}{}%
+Geng, Y., Sun, Q., Huang, J., Zhu, Y., \& Han, X. (2015). Dirty dozen and short dark triad: A chinese validation of two brief measures of the dark triad. \emph{Chinese Journal of Clinical Psychology}, \emph{23}(2), 246--250.
+
+\leavevmode\hypertarget{ref-grigoras2020measurement}{}%
+Grigoras, M., Butucescu, A., Miulescu, A., Opariuc-Dan, C., \& Iliescu, D. (2020). The measurement invariance of the short dark triad: Implications for high-and low-stakes contexts. \emph{Journal of Individual Differences}, 1--12.
+
+\leavevmode\hypertarget{ref-jonason2010dirty}{}%
+Jonason, P. K., \& Webster, G. D. (2010). The dirty dozen: A concise measure of the dark triad. \emph{Psychological Assessment}, \emph{22}(2), 420--432.
+
 \leavevmode\hypertarget{ref-R-semTools}{}%
 Jorgensen, T. D., Pornprasertmanit, S., Schoemann, A. M., \& Rosseel, Y. (2021). \emph{\texttt{semTools}: {U}seful tools for structural equation modeling}. Retrieved from \url{https://CRAN.R-project.org/package=semTools}
 
@@ -548,6 +602,12 @@ R Core Team. (2021). \emph{R: A language and environment for statistical computi
 
 \leavevmode\hypertarget{ref-R-lavaan}{}%
 Rosseel, Y. (2012). {lavaan}: An {R} package for structural equation modeling. \emph{Journal of Statistical Software}, \emph{48}(2), 1--36. Retrieved from \url{https://www.jstatsoft.org/v48/i02/}
+
+\leavevmode\hypertarget{ref-schmitt2008measurement}{}%
+Schmitt, N., \& Kuljanin, G. (2008). Measurement invariance: Review of practice and implications. \emph{Human Resource Management Review}, \emph{18}(4), 210--222.
+
+\leavevmode\hypertarget{ref-vandevelopmetrics}{}%
+Schoot, R. van de, Lugtig, P., \& Hox, J. (2012). Developmetrics: A checklist for testing measurement invariance. \emph{European Journal of Developmental Psychology}, \emph{9}(4), 486--492.
 
 \leavevmode\hypertarget{ref-steinmetz2009testing}{}%
 Steinmetz, H., Schmidt, P., Tina-Booh, A., Wieczorek, S., \& Schwartz, S. H. (2009). Testing measurement invariance using multigroup CFA: Differences between educational groups in human values measurement. \emph{Quality \& Quantity}, \emph{43}(4), 599--616.

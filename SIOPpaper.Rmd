@@ -24,7 +24,7 @@ authornote: |
   Enter author note here.
 
 abstract: |
-  Now we are evaluating the psychometric properties of the dirty dozen simplified Chinese version by using samples in real settings: job applicants and incumbents (in addition to students). We replicate a previous study using the student sample, then continue to evaluate with organizational data. We find that the scales are non-invariant. 
+  Now we are evaluating the psychometric properties of the dirty dozen simplified Chinese version by using samples in real settings: job applicants and incumbents (in addition to students). We replicate a previous study using the student sample, then continue to evaluate with organizational data. We find that the scales are non-invariant. Seems to be revisiting these articles: @geng2015dirty and @grigoras2020measurement
   
   <!-- https://tinyurl.com/ybremelq -->
   
@@ -65,10 +65,13 @@ All studies investigating psychometric properties of these scales use University
 
 Some groups may be expected to exhibit different item-construct associations due to shifting motivational forces. 
 
-ITC guidlines for translating and adapting tests recommends looking at possible differences across motives - for example, 
+ITC guidlines for translating and adapting tests recommends looking at possible differences across motives [@itc_2017]. For example, 
+
+Yang's references: @church2011cross, @vandevelopmetrics, @schmitt2008measurement, @geng2015dirty, @grigoras2020measurement, @jonason2010dirty
 
 # Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. We also look at intercorrelations among items within the samplings. 
+
+We follow the We also look at intercorrelations among items within the samplings. 
 
 ```{r readingdata}
 
@@ -128,6 +131,10 @@ knitr::include_graphics("steps.PNG")
 
 # Results
 
+We looked at structural invariance as well as latent means [@steinmetz2009testing; @meredith1993measurement]. The models failed to exhibit metric invariance (Model 2 - Model 1 exhibited a significant $\Delta$ on both $\chi^2$ as well as RMSEA) 
+
+> Not sure how to pull table or identify object elements - `model1` object is too large to navigate easily.
+
 ```{r measinv}
 
 ## https://users.ugent.be/~yrosseel/lavaan/multiplegroup6Dec2012.pdf
@@ -143,9 +150,29 @@ measurementInvariance(model=DD.model, data=use, group="selection")
 
 model1 <- cfa(model=DD.model, data=use, group="selection")
 summary(model1, fit.measures=TRUE)
+
+semPlot::semPaths(model1, "std", layout = "tree3", 
+                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)
 ```
 
-We looked at structural invariance as well as latent means [@steinmetz2009testing; @meredith1993measurement].
+
+Yang also wanted correlations
+
+```{r scalecors}
+
+library(corx)
+
+x <- corx(tempdata[,74:81],
+          triangle = "lower",
+          stars = c(0.05, 0.01, 0.001),
+          describe = c(`$M$` = mean, `$SD$` = sd))
+
+papaja::apa_table(x$apa, # apa contains the data.frame needed for apa_table
+                  caption = "Scale intercorrelations (all participants).",
+                  note = "* p < 0.05; ** p < 0.01; *** p < 0.001",
+                  escape = F)
+
+```
 
 # Discussion
 

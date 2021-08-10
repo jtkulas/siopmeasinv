@@ -1,0 +1,33 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:scalecors}Scale intercorrelations (all participants).}
+
+\begin{tabular}{llllllllll}
+\toprule
+ & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$SD$}\\
+\midrule
+1. Machiavelliansm & - &  &  &  &  &  &  & 1.62 & 0.78\\
+2. Narcissism & .29*** & - &  &  &  &  &  & 3.69 & 1.07\\
+3. Psychopathy & .57*** & .19*** & - &  &  &  &  & 1.51 & 0.62\\
+4. Fairness & -.34*** & -.02 & -.45*** & - &  &  &  & 5.40 & 0.84\\
+5. GreedAvoidance & -.26*** & -.45*** & -.24*** & .27*** & - &  &  & 3.52 & 1.14\\
+6. Modesty & -.23*** & -.43*** & -.17*** & .15** & .43*** & - &  & 3.72 & 0.85\\
+7. Sincerity & -.14** & .04 & -.04 & .23*** & .11* & .18*** & - & 3.85 & 0.74\\
+8. HonestyHumility & -.38*** & -.37*** & -.35*** & .61*** & .77*** & .68*** & .51*** & 4.12 & 0.59\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * p < 0.05; ** p < 0.01; *** p < 0.001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
