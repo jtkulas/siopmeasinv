@@ -170,9 +170,50 @@ x <- corx(tempdata[,74:81],
 papaja::apa_table(x$apa, # apa contains the data.frame needed for apa_table
                   caption = "Scale intercorrelations (all participants).",
                   note = "* p < 0.05; ** p < 0.01; *** p < 0.001",
+                  landscape = TRUE,
                   escape = F)
 
+## Subsetting for 3 groups (8/26/21)
+
+lowstakes <- tempdata[ which(tempdata$selection=='working adults low-stakes'), ]
+highstakes <- tempdata[ which(tempdata$selection=='working adults high-stakes'), ]
+students <- tempdata[ which(tempdata$selection=='students low-stakes'), ]
+
+y <- corx(lowstakes[,74:81],
+          triangle = "lower",
+          stars = c(0.05, 0.01, 0.001),
+          describe = c(`$M$` = mean, `$SD$` = sd))
+
+papaja::apa_table(y$apa, # apa contains the data.frame needed for apa_table
+                  caption = "Scale intercorrelations (working adults low-stakes).",
+                  note = "* p < 0.05; ** p < 0.01; *** p < 0.001",
+                  landscape = TRUE,
+                  escape = F)
+
+
+z <- corx(highstakes[,74:81],
+          triangle = "lower",
+          stars = c(0.05, 0.01, 0.001),
+          describe = c(`$M$` = mean, `$SD$` = sd))
+
+papaja::apa_table(z$apa, # apa contains the data.frame needed for apa_table
+                  caption = "Scale intercorrelations (working adults high-stakes).",
+                  note = "* p < 0.05; ** p < 0.01; *** p < 0.001",
+                  landscape = TRUE,
+                  escape = F)
+
+zz <- corx(students[,74:81],
+          triangle = "lower",
+          stars = c(0.05, 0.01, 0.001),
+          describe = c(`$M$` = mean, `$SD$` = sd))
+
+papaja::apa_table(zz$apa, # apa contains the data.frame needed for apa_table
+                  caption = "Scale intercorrelations (students low-stakes).",
+                  note = "* p < 0.05; ** p < 0.01; *** p < 0.001",
+                  landscape = TRUE,
+                  escape = F)
 ```
+
 
 # Discussion
 
