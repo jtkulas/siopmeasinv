@@ -1,3 +1,33 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:measinv}Measurement invariance summary statistics.}
+
+\begin{tabular}{llllllll}
+\toprule
+ & \multicolumn{1}{c}{Df} & \multicolumn{1}{c}{AIC} & \multicolumn{1}{c}{BIC} & \multicolumn{1}{c}{Chisq} & \multicolumn{1}{c}{Chisq diff} & \multicolumn{1}{c}{Df diff} & \multicolumn{1}{c}{Pr(>Chisq)}\\
+\midrule
+configural & 153 & 37,059.45 & 37,639.59 & 1,407.67 & NA & NA & NA\\
+weak & 171 & 37,134.71 & 37,625.60 & 1,518.93 & 111.25 & 18 & 0.00\\
+strong & 189 & 37,230.25 & 37,631.89 & 1,650.47 & 131.55 & 18 & 0.00\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * p < 0.05; ** p < 0.01; *** p < 0.001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\efloatseparator
+ 
 \begin{lltable}
 
 \begin{TableNotes}[para]
