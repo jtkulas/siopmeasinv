@@ -155,10 +155,10 @@ DD.model <-'mach   =~ A30 + A31 + A32 + A33
 configural <- cfa(model=DD.model, data=use, group="selection") # configural invariance
 weak <- cfa(model=DD.model, data=use, group="selection", group.equal="loadings") # weak invariance
 strong <- cfa(model=DD.model, data=use, group="selection", group.equal=c("intercepts", "loadings")) # strong invariance
-
+strict <- cfa(model=DD.model, data=use, group="selection", group.equal=c("loadings", "intercepts", "residuals"))
 # summary(configural, fit.measures=TRUE)
 
-fittab <- lavTestLRT(configural,weak,strong)
+fittab <- lavTestLRT(configural,weak,strong, strict)
 write.csv(fittab, "groupindices.csv")
 #semPlot::semPaths(model1, "std", layout = "tree3", 
 #                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)
