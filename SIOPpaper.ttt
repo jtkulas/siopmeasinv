@@ -1,34 +1,3 @@
-\begin{table*}[hbt]
-\ifnextchar[{\eatarg}{}
-[tbp]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:measinv}Measurement invariance summary statistics.}
-
-\begin{tabular}{llllllll}
-\toprule
- & \multicolumn{1}{c}{Df} & \multicolumn{1}{c}{AIC} & \multicolumn{1}{c}{BIC} & \multicolumn{1}{c}{Chisq} & \multicolumn{1}{c}{Chisq diff} & \multicolumn{1}{c}{Df diff} & \multicolumn{1}{c}{Pr(>Chisq)}\\
-\midrule
-configural & 153 & 37,059.45 & 37,639.59 & 1,407.67 & NA & NA & NA\\
-weak & 171 & 37,134.71 & 37,625.60 & 1,518.93 & 111.25 & 18 & 0.00\\
-strong & 189 & 37,230.25 & 37,631.89 & 1,650.47 & 131.55 & 18 & 0.00\\
-strict & 213 & 37,670.36 & 37,952.99 & 2,138.58 & 488.11 & 24 & 0.00\\
-\bottomrule
-\addlinespace
-\end{tabular}
-
-\begin{tablenotes}[para]
-\normalsize{\textit{Note.} * p < 0.05; ** p < 0.01; *** p < 0.001}
-\end{tablenotes}
-
-\end{threeparttable}
-\end{center}
-
-\end{table*}
-\efloatseparator
- 
 \begin{lltable}
 
 \begin{TableNotes}[para]
@@ -126,36 +95,138 @@ strict & 213 & 37,670.36 & 37,952.99 & 2,138.58 & 488.11 & 24 & 0.00\\
 \end{longtable}
 
 \end{lltable}
-\efloatseparator
- 
-\begin{lltable}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
 
-\begin{TableNotes}[para]
-\normalsize{\textit{Note.} * p < 0.05; ** p < 0.01; *** p < 0.001}
-\end{TableNotes}
+\begin{center}
+\begin{threeparttable}
 
-\begin{longtable}{llllllllll}\noalign{\getlongtablewidth\global\LTcapwidth=\longtablewidth}
-\caption{\label{tab:scalecors}Scale intercorrelations (students low-stakes).}\\
+\caption{\label{tab:scalecors}Scale intercorrelations (students low-stakes).}
+
+\begin{tabular}{lllll}
 \toprule
- & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$SD$}\\
+ & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$SD$}\\
 \midrule
-\endfirsthead
-\caption*{\normalfont{Table \ref{tab:scalecors} continued}}\\
-\toprule
- & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$SD$}\\
-\midrule
-\endhead
-1. Machiavelliansm & - &  &  &  &  &  &  & NA & NA\\
-2. Narcissism & NA & - &  &  &  &  &  & NA & NA\\
-3. Psychopathy & NA & NA & - &  &  &  &  & NA & NA\\
-4. Fairness & NA & NA & NA & - &  &  &  & NA & NA\\
-5. GreedAvoidance & NA & NA & NA & NA & - &  &  & NA & NA\\
-6. Modesty & NA & NA & NA & NA & NA & - &  & NA & NA\\
-7. Sincerity & NA & NA & NA & NA & NA & NA & - & NA & NA\\
-8. HonestyHumility & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
+1. Machiavelliansm & - &  & 2.25 & 1.21\\
+2. Narcissism & .39*** & - & 4.24 & 1.13\\
+3. Psychopathy & .51*** & .27*** & 1.99 & 1.06\\
 \bottomrule
 \addlinespace
-\insertTableNotes
-\end{longtable}
+\end{tabular}
 
-\end{lltable}
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * p < 0.05; ** p < 0.01; *** p < 0.001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:anovas}Machiavellianism}
+
+\begin{tabular}{lllllll}
+\toprule
+Effect & \multicolumn{1}{c}{$F$} & \multicolumn{1}{c}{$\mathit{df}_1$} & \multicolumn{1}{c}{$\mathit{df}_2$} & \multicolumn{1}{c}{$\mathit{MSE}$} & \multicolumn{1}{c}{$p$} & \multicolumn{1}{c}{$\hat{\eta}^2_G$}\\
+\midrule
+Selection & 56.59 & 2 & 1,101 & 0.89 & < .001 & .093\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} Need to figure out how to get all three into one table.}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:anovas}Psychopathy}
+
+\begin{tabular}{lllllll}
+\toprule
+Effect & \multicolumn{1}{c}{$F$} & \multicolumn{1}{c}{$\mathit{df}_1$} & \multicolumn{1}{c}{$\mathit{df}_2$} & \multicolumn{1}{c}{$\mathit{MSE}$} & \multicolumn{1}{c}{$p$} & \multicolumn{1}{c}{$\hat{\eta}^2_G$}\\
+\midrule
+Selection & 57.18 & 2 & 1,101 & 0.62 & < .001 & .094\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} Need to figure out how to get all three into one table.}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:anovas}Narcissism}
+
+\begin{tabular}{lllllll}
+\toprule
+Effect & \multicolumn{1}{c}{$F$} & \multicolumn{1}{c}{$\mathit{df}_1$} & \multicolumn{1}{c}{$\mathit{df}_2$} & \multicolumn{1}{c}{$\mathit{MSE}$} & \multicolumn{1}{c}{$p$} & \multicolumn{1}{c}{$\hat{\eta}^2_G$}\\
+\midrule
+Selection & 31.46 & 2 & 1,101 & 1.19 & < .001 & .054\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} Need to figure out how to get all three into one table.}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:measinv}Measurement invariance summary statistics.}
+
+\begin{tabular}{llllllll}
+\toprule
+ & \multicolumn{1}{c}{Df} & \multicolumn{1}{c}{AIC} & \multicolumn{1}{c}{BIC} & \multicolumn{1}{c}{Chisq} & \multicolumn{1}{c}{Chisq diff} & \multicolumn{1}{c}{Df diff} & \multicolumn{1}{c}{Pr(>Chisq)}\\
+\midrule
+configural & 153 & 37,059.45 & 37,639.59 & 1,407.67 & NA & NA & NA\\
+weak & 171 & 37,134.71 & 37,625.60 & 1,518.93 & 111.25 & 18 & 0.00\\
+strong & 189 & 37,230.25 & 37,631.89 & 1,650.47 & 131.55 & 18 & 0.00\\
+strict & 213 & 37,670.36 & 37,952.99 & 2,138.58 & 488.11 & 24 & 0.00\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * p < 0.05; ** p < 0.01; *** p < 0.001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
