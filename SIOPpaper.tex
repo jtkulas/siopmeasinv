@@ -140,7 +140,7 @@
 
 Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
 
-Enter author note here.
+Possible outlets: International Journal of Assessment and Selection; Personality and Individual Differences
 
 Correspondence concerning this article should be addressed to Yang Yang, Shanghai, China. E-mail: \href{mailto:yangyangsh@outlook.com}{\nolinkurl{yangyangsh@outlook.com}}
 
@@ -327,81 +327,6 @@ We used R (Version 4.0.3; R Core Team, 2021) and the R-packages \emph{careless} 
 
 Inter-scale correlations are presented in Tables X, Y, and Z.
 
-\begin{table}[tbp]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:anovas}Machiavellianism}
-
-\begin{tabular}{lllllll}
-\toprule
-Effect & \multicolumn{1}{c}{$F$} & \multicolumn{1}{c}{$\mathit{df}_1$} & \multicolumn{1}{c}{$\mathit{df}_2$} & \multicolumn{1}{c}{$\mathit{MSE}$} & \multicolumn{1}{c}{$p$} & \multicolumn{1}{c}{$\hat{\eta}^2_G$}\\
-\midrule
-Selection & 56.59 & 2 & 1,101 & 0.89 & < .001 & .093\\
-\bottomrule
-\addlinespace
-\end{tabular}
-
-\begin{tablenotes}[para]
-\normalsize{\textit{Note.} Need to figure out how to get all three into one table.}
-\end{tablenotes}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-\begin{table}[tbp]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:anovas}Psychopathy}
-
-\begin{tabular}{lllllll}
-\toprule
-Effect & \multicolumn{1}{c}{$F$} & \multicolumn{1}{c}{$\mathit{df}_1$} & \multicolumn{1}{c}{$\mathit{df}_2$} & \multicolumn{1}{c}{$\mathit{MSE}$} & \multicolumn{1}{c}{$p$} & \multicolumn{1}{c}{$\hat{\eta}^2_G$}\\
-\midrule
-Selection & 57.18 & 2 & 1,101 & 0.62 & < .001 & .094\\
-\bottomrule
-\addlinespace
-\end{tabular}
-
-\begin{tablenotes}[para]
-\normalsize{\textit{Note.} Need to figure out how to get all three into one table.}
-\end{tablenotes}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-\begin{table}[tbp]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:anovas}Narcissism}
-
-\begin{tabular}{lllllll}
-\toprule
-Effect & \multicolumn{1}{c}{$F$} & \multicolumn{1}{c}{$\mathit{df}_1$} & \multicolumn{1}{c}{$\mathit{df}_2$} & \multicolumn{1}{c}{$\mathit{MSE}$} & \multicolumn{1}{c}{$p$} & \multicolumn{1}{c}{$\hat{\eta}^2_G$}\\
-\midrule
-Selection & 31.46 & 2 & 1,101 & 1.19 & < .001 & .054\\
-\bottomrule
-\addlinespace
-\end{tabular}
-
-\begin{tablenotes}[para]
-\normalsize{\textit{Note.} Need to figure out how to get all three into one table.}
-\end{tablenotes}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
 Mean differences were noted across groups for all three dark triad scales: Machiavellianism (\(F(2, 1,101) = 56.59\), \(\mathit{MSE} = 0.89\), \(p < .001\), \(\hat{\eta}^2_G = .093\)), Psychopathy (\(F(2, 1,101) = 57.18\), \(\mathit{MSE} = 0.62\), \(p < .001\), \(\hat{\eta}^2_G = .094\)), and Narcissism (\(F(2, 1,101) = 31.46\), \(\mathit{MSE} = 1.19\), \(p < .001\), \(\hat{\eta}^2_G = .054\)). The Machiavellianism effect was driven by students exhibiting lower scores than both low- (\emph{t} = -6.18, \emph{p} \textless{} .0001) and high-stakes (\emph{t} = -10.53, \emph{p} \textless{} .0001) working adults. The Psychopathy effect occured across all contrasts: students exhibiting lower scores than both low- (\emph{t} = -3.88, \emph{p} \textless{} .001) and high-stakes (\emph{t} = -10.64, \emph{p} \textless{} .0001) working adults, as well as low-stakes working adults having higher Psychopathy scores than high-stakes working adults (\emph{t} = 4.70, \emph{p} \textless{} .0001). For Narcissism students once again exhibited lower scores than both low- (\emph{t} = -6.35, \emph{p} \textless{} .0001) and high-stakes (\emph{t} = -7.14, \emph{p} \textless{} .0001) working adults.
 
 \hypertarget{measurement-invariance}{%
@@ -417,21 +342,57 @@ We looked at structural invariance as well as latent means (Meredith, 1993; Stei
 Not sure how to pull table or identify object elements - \texttt{model1} object is too large to navigate easily.
 \end{quote}
 
+\hypertarget{only-adults}{%
+\subsection{Only Adults}\label{only-adults}}
+
+These analyses only focus on working adults:
+
 \begin{table}[tbp]
 
 \begin{center}
 \begin{threeparttable}
 
-\caption{\label{tab:measinv}Measurement invariance summary statistics.}
+\caption{\label{tab:measinv}Measurement invariance summary statistics (only adults).}
 
 \begin{tabular}{llllllll}
 \toprule
  & \multicolumn{1}{c}{Df} & \multicolumn{1}{c}{AIC} & \multicolumn{1}{c}{BIC} & \multicolumn{1}{c}{Chisq} & \multicolumn{1}{c}{Chisq diff} & \multicolumn{1}{c}{Df diff} & \multicolumn{1}{c}{Pr(>Chisq)}\\
 \midrule
-configural & 153 & 37,059.45 & 37,639.59 & 1,407.67 & NA & NA & NA\\
-weak & 171 & 37,134.71 & 37,625.60 & 1,518.93 & 111.25 & 18 & 0.00\\
-strong & 189 & 37,230.25 & 37,631.89 & 1,650.47 & 131.55 & 18 & 0.00\\
-strict & 213 & 37,670.36 & 37,952.99 & 2,138.58 & 488.11 & 24 & 0.00\\
+configural & 102 & 24,852.61 & 25,211.19 & 861.02 & NA & NA & NA\\
+weak & 111 & 24,872.01 & 25,189.21 & 898.42 & 37.40 & 9 & 0.00\\
+strong & 120 & 24,917.88 & 25,193.71 & 962.29 & 63.87 & 9 & 0.00\\
+strict & 132 & 24,981.06 & 25,201.73 & 1,049.47 & 87.18 & 12 & 0.00\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * p < 0.05; ** p < 0.01; *** p < 0.001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+\hypertarget{adults-plus-students}{%
+\subsection{Adults plus students:}\label{adults-plus-students}}
+
+\begin{table}[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:measinv2}Measurement invariance summary statistics (adults plus students).}
+
+\begin{tabular}{llllllll}
+\toprule
+ & \multicolumn{1}{c}{Df} & \multicolumn{1}{c}{AIC} & \multicolumn{1}{c}{BIC} & \multicolumn{1}{c}{Chisq} & \multicolumn{1}{c}{Chisq diff} & \multicolumn{1}{c}{Df diff} & \multicolumn{1}{c}{Pr(>Chisq)}\\
+\midrule
+configural2 & 153 & 39,187.40 & 39,773.18 & 1,685.22 & NA & NA & NA\\
+weak2 & 171 & 39,279.90 & 39,775.56 & 1,813.72 & 128.50 & 18 & 0.00\\
+strong2 & 189 & 39,388.61 & 39,794.15 & 1,958.43 & 144.71 & 18 & 0.00\\
+strict2 & 213 & 39,857.14 & 40,142.52 & 2,474.96 & 516.53 & 24 & 0.00\\
 \bottomrule
 \addlinespace
 \end{tabular}

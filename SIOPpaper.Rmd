@@ -21,7 +21,7 @@ affiliation:
 authornote: |
   Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
 
-  Enter author note here.
+  Possible outlets: International Journal of Assessment and Selection; Personality and Individual Differences
 
 abstract: |
   Now we are evaluating the psychometric properties of the dirty dozen simplified Chinese version by using samples in real settings: job applicants and incumbents (in addition to students). We replicate a previous study using the student sample [@geng2015dirty], then continue to evaluate with organizational data. We find that the scales are non-invariant. 
@@ -211,11 +211,11 @@ mach_anova <- afex::aov_ez(
 )
 apa_anova1 <- apa_print(mach_anova)
 
-apa_table(
-  apa_anova1$table
-  , caption = "Machiavellianism"
-  , note = "Need to figure out how to get all three into one table."
-)
+#apa_table(
+#  apa_anova1$table
+#  , caption = "Machiavellianism"
+#  , note = "Need to figure out how to get all three into one table."
+#)
 
 psycho_anova <- afex::aov_ez(
   data = anovadata
@@ -225,11 +225,11 @@ psycho_anova <- afex::aov_ez(
 )
 apa_anova2 <- apa_print(psycho_anova)
 
-apa_table(
-  apa_anova2$table
-  , caption = "Psychopathy"
-  , note = "Need to figure out how to get all three into one table."
-)
+#apa_table(
+#  apa_anova2$table
+#  , caption = "Psychopathy"
+#  , note = "Need to figure out how to get all three into one table."
+#)
 
 
 narc_anova <- afex::aov_ez(
@@ -240,11 +240,11 @@ narc_anova <- afex::aov_ez(
 )
 apa_anova3 <- apa_print(narc_anova)
 
-apa_table(
-  apa_anova3$table
-  , caption = "Narcissism"
-  , note = "Need to figure out how to get all three into one table."
-)
+#apa_table(
+#  apa_anova3$table
+#  , caption = "Narcissism"
+#  , note = "Need to figure out how to get all three into one table."
+#)
 
 m1 <- emmeans::emmeans(mach_anova, ~ selection)
 m2 <- emmeans::emmeans(psycho_anova, ~ selection)
@@ -269,6 +269,10 @@ knitr::include_graphics("steps.PNG")
 
 > Not sure how to pull table or identify object elements - `model1` object is too large to navigate easily.
 
+## Only Adults
+
+These analyses only focus on working adults:
+
 ```{r measinv}
 
 ## https://users.ugent.be/~yrosseel/lavaan/multiplegroup6Dec2012.pdf
@@ -286,11 +290,15 @@ DD.model <-'mach   =~ A30 + A31 + A32 + A33
 # Using below instead of above (above function is depreciated and tutorial is 2012)
 # https://lavaan.ugent.be/tutorial/groups.html
 
-configural <- cfa(model=DD.model, data=use, group="selection") # configural invariance
-weak <- cfa(model=DD.model, data=use, group="selection", group.equal="loadings") # weak invariance
-strong <- cfa(model=DD.model, data=use, group="selection", group.equal=c("intercepts", "loadings")) # strong invariance
-strict <- cfa(model=DD.model, data=use, group="selection", group.equal=c("loadings", "intercepts", "residuals"))
+onlyadults <- as.data.frame(rbind(lowstakes, highstakes))
+
+configural <- cfa(model=DD.model, data=onlyadults, group="selection") # configural invariance
+weak <- cfa(model=DD.model, data=onlyadults, group="selection", group.equal="loadings") # weak invariance
+strong <- cfa(model=DD.model, data=onlyadults, group="selection", group.equal=c("intercepts", "loadings")) # strong invariance
+strict <- cfa(model=DD.model, data=onlyadults, group="selection", group.equal=c("loadings", "intercepts", "residuals"))
 # summary(configural, fit.measures=TRUE)
+
+## changed above to only adults
 
 fittab <- lavTestLRT(configural,weak,strong, strict)
 write.csv(fittab, "groupindices.csv")
@@ -298,13 +306,36 @@ write.csv(fittab, "groupindices.csv")
 #                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)
 
 papaja::apa_table(fittab, # apa contains the data.frame needed for apa_table
-                  caption = "Measurement invariance summary statistics.",
+                  caption = "Measurement invariance summary statistics (only adults).",
                   note = "* p < 0.05; ** p < 0.01; *** p < 0.001",
                   landscape = FALSE,
                   escape = F)
 
 ```
 
+## Adults plus students:
+
+```{r measinv2}
+
+studentsadults <- as.data.frame(rbind(lowstakes, highstakes, students))
+
+configural2 <- cfa(model=DD.model, data=studentsadults, group="selection") # configural invariance
+weak2 <- cfa(model=DD.model, data=studentsadults, group="selection", group.equal="loadings") # weak invariance
+strong2 <- cfa(model=DD.model, data=studentsadults, group="selection", group.equal=c("intercepts", "loadings")) # strong invariance
+strict2 <- cfa(model=DD.model, data=studentsadults, group="selection", group.equal=c("loadings", "intercepts", "residuals"))
+
+
+fittab2 <- lavTestLRT(configural2,weak2,strong2, strict2)
+write.csv(fittab2, "groupindices2.csv")
+
+
+papaja::apa_table(fittab2, # apa contains the data.frame needed for apa_table
+                  caption = "Measurement invariance summary statistics (adults plus students).",
+                  note = "* p < 0.05; ** p < 0.01; *** p < 0.001",
+                  landscape = FALSE,
+                  escape = F)
+
+```
 
 # Discussion
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.7)  23 SEP 2021 13:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.5)  4 NOV 2021 09:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -669,12 +669,6 @@ LaTeX Warning: Label `tab:scalecors' multiply defined.
 
 LaTeX Warning: Label `tab:scalecors' multiply defined.
 
-
-LaTeX Warning: Label `tab:anovas' multiply defined.
-
-
-LaTeX Warning: Label `tab:anovas' multiply defined.
-
 )
 \openout1 = `SIOPpaper.aux'.
 
@@ -855,29 +849,29 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 ]) [12
 
-] [13] [14] (./SIOPpaper.fff
-<steps.png, id=168, 850.377pt x 307.1475pt>
+] [13] (./SIOPpaper.fff
+<steps.png, id=170, 850.377pt x 307.1475pt>
 File: steps.png Graphic file (type png)
 <use steps.png>
 Package pdftex.def Info: steps.png  used on input line 4.
 (pdftex.def)             Requested size: 340.40428pt x 122.95055pt.
-) [15
+) [14
 
  <./steps.PNG>] (./SIOPpaper.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `SIOPpaper.out' has not changed.
-(rerunfilecheck)             Checksum: 306ABD0E4EFC730C560C0D5E41485296;1212.
+(rerunfilecheck)             Checksum: 6187D4C7434CFF3B20B944070D4FCACB;1493.
  ) 
 Here is how much of TeX's memory you used:
- 14832 strings out of 480559
- 227931 string characters out of 5901697
- 558818 words of memory out of 5000000
- 32097 multiletter control sequences out of 15000+600000
+ 14835 strings out of 480559
+ 227976 string characters out of 5901696
+ 558051 words of memory out of 5000000
+ 32101 multiletter control sequences out of 15000+600000
  459946 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,13n,80p,2248b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,11n,80p,2248b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/kulasj/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.
 enc}{c:/Users/kulasj/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-m
 athit.enc}{c:/Users/kulasj/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
@@ -891,10 +885,10 @@ texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/kulasj/AppData/Roaming/Ti
 nyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/Users/kulasj/AppData/Roami
 ng/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/Users/kulasj/AppData
 /Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on SIOPpaper.pdf (15 pages, 406557 bytes).
+Output written on SIOPpaper.pdf (14 pages, 406740 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 69 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 
